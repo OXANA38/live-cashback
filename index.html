@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="container">
             <span class="logo">LIVE<span>CASHBACK</span></span>
-            <a href="https://t.me/ваш_бот" class="btn-primary">Вход в бот</a>
+            <a href="https://t.me/LiveCashBack_bot" class="btn-primary">Вход в бот</a>
         </div>
     </nav>
 
@@ -22,24 +22,33 @@
                 <h1>Экономия будущего <br><span>уже сегодня</span></h1>
                 <p>Революционная система скидок: OZON, Wildberries, Яндекс.Заправки и такси. Получайте выгоду до 90% на ежедневные покупки.</p>
                 <div class="hero-btns">
-                    <a href="#calculator" class="btn-primary">Рассчитать доход</a>
-                    <a href="#about" class="btn-outline">Узнать больше</a>
+                    <a href="#calculator" class="btn-primary">Рассчитать выгоду</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="img/dashboard.jpg" alt="Live Cashback Dashboard">
+                <img src="img/photo_2026-02-28_09-43-02.jpg" alt="Live Cashback Dashboard">
             </div>
         </div>
     </header>
 
+    <section class="partners">
+        <div class="container">
+            <p>Наши партнеры</p>
+            <div class="partner-logos">
+                <span>OZON</span>
+                <span>WILDBERRIES</span>
+                <span>Яндекс Go</span>
+                <span>Яндекс Заправки</span>
+            </div>
+        </div>
+    </section>
+
     <section id="calculator" class="calc-section">
         <div class="container">
             <h2>Интерактивный калькулятор баллов</h2>
-            <p class="section-subtitle">Посмотрите, как растут ваши возможности каждый день</p>
-            
             <div class="calc-wrapper">
                 <div class="calc-inputs">
-                    <label>Выберите номинал карты:</label>
+                    <label>Выберите номинал вашей LiveCard:</label>
                     <select id="cardSelect">
                         <option value="5000">Start (5 000 ₽)</option>
                         <option value="10000">Standard (10 000 ₽)</option>
@@ -49,7 +58,7 @@
                         <option value="150000">VIP (150 000 ₽)</option>
                     </select>
 
-                    <label>Срок (дней): <span id="daysVal">30</span></label>
+                    <label>Срок накопления (дней): <span id="daysVal">30</span></label>
                     <input type="range" id="daysRange" min="1" max="150" value="30">
                 </div>
                 
@@ -57,12 +66,60 @@
                     <div class="result-box">
                         <span class="label">Итого на балансе:</span>
                         <span id="finalBalance" class="value">0</span>
-                        <span class="currency">баллов (₽)</span>
+                        <span class="currency">баллов (рублей)</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Как вы будете экономить</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="img/photo_2026-02-28_09-46-13.jpg" alt="Карта Max 80000">
+                    <h3>Максимальные лимиты</h3>
+                    <p>Активируйте карты с балансом до 400 000 баллов и забудьте о лишних тратах.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/photo_2026-02-28_09-46-06.jpg" alt="Сертификаты Яндекс">
+                    <h3>Прямой обмен</h3>
+                    <p>Обменивайте баллы на сертификаты Яндекс.Заправок по курсу 1 балл = 1 рубль.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/photo_2026-02-28_09-46-37.jpg" alt="Выплаты и доход">
+                    <h3>Реальная выгода</h3>
+                    <p>Наглядная история операций и мгновенное зачисление бонусов в личном кабинете.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to">
+        <div class="container">
+            <div class="how-grid">
+                <div class="how-img">
+                    <img src="img/photo_2026-02-28_09-45-59.jpg" alt="Интерфейс бота">
+                </div>
+                <div class="how-text">
+                    <h2>Всего 3 шага до выгоды</h2>
+                    <ul>
+                        <li><span>1</span> Запустите Telegram-бота и выберите LiveCard</li>
+                        <li><span>2</span> Получайте ежедневные начисления (1% + 1%)</li>
+                        <li><span>3</span> Тратьте баллы на OZON, WB и топливо</li>
+                    </ul>
+                    <a href="https://t.me/LiveCashBack_bot" class="btn-primary">Начать сейчас</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Live Cashback. Все права защищены. Техподдержка: @yazap444</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
