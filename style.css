@@ -52,6 +52,16 @@ body {
 .hero-left p { font-size: 1.4rem; color: var(--gray); margin-bottom: 40px; }
 .hero-slide { width: 100%; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
 
+.hero-main-img {
+  width: 100%;               /* занимает всю ширину контейнера */
+  max-width: 800px;          /* не шире 800px на больших экранах */
+  height: auto;              /* сохраняет пропорции */
+  display: block;            /* убирает лишние отступы снизу */
+  margin: 30px auto 0;       /* центрируем и добавляем отступ сверху */
+  border-radius: 16px;       /* скругление углов, как в твоём стиле */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5); /* тень для красоты */
+}
+
 .section { padding: 120px 0; }
 .section-title {
   text-align: center;
