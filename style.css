@@ -273,21 +273,3 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
   border-radius: 0;                /* без скруглений — выглядит как настоящий скрин */
   box-shadow: 0 20px 60px rgba(0,0,0,0.7);
 }
-
-/* На очень широких экранах ограничиваем максимум */
-@media (min-width: 1400px) {
-  .fuel .slides-row img {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto 60px;
-    border-radius: 20px;
-  }
-}
-
-/* На мобильных — чуть меньше отступов и высоты */
-@media (max-width: 900px) {
-  .fuel .slides-row img {
-    min-height: 450px;             /* на телефоне не слишком огромная */
-    margin: 30px -15px 40px -15px;
-  }
-}
