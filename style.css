@@ -167,16 +167,34 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
 
 .slides-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin: 40px 0;
+  grid-template-columns: repeat(2, 1fr);     /* всегда 2 колонки, даже на большом экране */
+  gap: 40px;                                 /* расстояние между картинками */
+  margin: 60px 0;
+  max-width: 1200px;                         /* ограничиваем ширину всего ряда */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slides-row img {
   width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-  border: 2px solid #333;
+  border: 2px solid rgba(100, 100, 150, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.slides-row img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+
+/* На мобильных — 1 колонка, чтобы не было слишком мелко */
+@media (max-width: 900px) {
+  .slides-row {
+    grid-template-columns: 1fr;              /* на телефоне — одна картинка в ряд */
+    gap: 30px;
+  }
 }
 
 .tariff-list {
