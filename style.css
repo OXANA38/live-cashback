@@ -232,3 +232,31 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
 }
 
 .center-text { text-align: center; font-size: 1.4rem; margin: 30px 0; color: #ccc; }
+
+/* Полноэкранная картинка для заправок */
+.full-width-fuel {
+  width: 100vw;                    /* на всю ширину окна браузера (viewport width) */
+  max-width: none;                 /* снимаем любые ограничения контейнера */
+  height: auto;                    /* сохраняем пропорции */
+  display: block;
+  margin: 40px -20px 40px -20px;   /* выходим за пределы .container на 20px с каждой стороны */
+  border-radius: 0;                /* убираем скругления, чтобы выглядело как настоящий скрин */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* На очень широких экранах не даём растягиваться бесконечно */
+@media (min-width: 1400px) {
+  .full-width-fuel {
+    width: 100%;                   /* на десктопе возвращаем в контейнер */
+    max-width: 1400px;             /* или любое другое максимальное значение */
+    margin: 40px auto;
+    border-radius: 20px;           /* возвращаем скругление */
+  }
+}
+
+/* На мобильных — тоже на всю ширину, без отступов */
+@media (max-width: 900px) {
+  .full-width-fuel {
+    margin: 30px -15px;            /* меньше вылет за края на телефоне */
+  }
+}
