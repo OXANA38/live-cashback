@@ -3,69 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Cashback | Официальный сервис</title>
+    <title>Live Cashback | Официальный сайт</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero">
+    <nav class="navbar">
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">LIVE<span>CASHBACK</span></div>
-                <a href="https://t.me/LiveCashBack_bot" class="btn-primary">Запустить бота</a>
-            </nav>
-            <div class="hero-content">
-                <img src="image/Image 1.jpg" alt="Live Cashback Intro" class="main-slide">
-                <h1>Экономия будущего <span>уже сегодня</span></h1>
-                <p>Единая экосистема скидок: от продуктов до топлива.</p>
-            </div>
+            <div class="logo">LIVE<span>CASHBACK</span></div>
+            <a href="https://t.me/LiveCashBack_bot" class="btn-primary">Запустить бота</a>
         </div>
-    </header>
+    </nav>
 
-    <section class="screen-collage">
+    <section class="section">
         <div class="container">
-            <h2>Прозрачность и результат</h2>
-            <div class="collage-container">
-                <img src="image/photo_2026-02-28_09-43-02.jpg" class="screen s1" alt="Ozon 1">
-                <img src="image/photo_2026-02-28_09-46-37.jpg" class="screen s2" alt="Ozon 2">
-                <img src="image/photo_2026-02-28_09-46-06.jpg" class="screen s3" alt="Ozon 3">
-            </div>
-            <p class="caption">Реальные примеры обмена баллов и личного кабинета</p>
+            <img src="img/Image 1.jpg" alt="Презентация 1" class="full-slide">
+            <img src="img/Image 2.jpg" alt="Презентация 2" class="full-slide">
+            <img src="img/Image 3.jpg" alt="Презентация 3" class="full-slide">
         </div>
     </section>
 
-    <section class="cards-presentation">
+    <section class="collage-section">
         <div class="container">
-            <h2>Выберите свою LiveCard</h2>
-            <div class="slides-grid">
-                <img src="image/Image 4.jpg" alt="Тарифы">
+            <h2 class="title">Результаты и выплаты</h2>
+            <div class="collage-container">
+                <img src="img/photo_2026-02-28_09-43-02.jpg" class="screen s1" alt="Кабинет">
+                <img src="img/Screenshot_5.png" class="screen s2" alt="Скриншот">
+                <img src="img/photo_2026-02-28_09-46-37.jpg" class="screen s3" alt="Выплаты">
             </div>
+            <p class="collage-caption">Реальные примеры работы системы и обмена баллов на маркетплейсах</p>
         </div>
     </section>
 
     <section id="calculator" class="calc-section">
         <div class="container">
+            <img src="img/Image 4.jpg" alt="Тарифы" class="full-slide">
+            
             <div class="calc-card">
-                <h2>Калькулятор доходности</h2>
-                <div class="calc-flex">
+                <h2>Рассчитайте свою выгоду</h2>
+                <div class="calc-grid">
                     <div class="inputs">
                         <label>Номинал карты:</label>
                         <select id="cardSelect">
                             <option value="5000">Start (5 000 ₽)</option>
+                            <option value="10000">Standard (10 000 ₽)</option>
                             <option value="20000">Medium (20 000 ₽)</option>
                             <option value="40000">Pro (40 000 ₽)</option>
                             <option value="80000">Max (80 000 ₽)</option>
                             <option value="150000">VIP (150 000 ₽)</option>
                         </select>
-                        <label>Дней владения: <span id="daysVal">30</span></label>
+                        <label>Срок (дней): <span id="daysVal">30</span></label>
                         <input type="range" id="daysRange" min="1" max="150" value="30">
                     </div>
-                    <div class="outputs">
-                        <div class="res-box">
-                            <small>Ваш баланс через указанный срок:</small>
-                            <div id="finalBalance">0</div>
-                            <span>баллов</span>
+                    <div class="results">
+                        <div class="res-display">
+                            <span id="finalBalance">0</span>
+                            <small>баллов</small>
                         </div>
                     </div>
                 </div>
@@ -73,37 +67,19 @@
         </div>
     </section>
 
-    <section class="yandex-go">
+    <section class="section">
         <div class="container">
-            <h2>Яндекс.Go — Такси, Еда, Доставка</h2>
-            <div class="yandex-grid">
-                <div class="y-text">
-                    <p>Пользуйтесь всеми сервисами Яндекса, оплачивая до 100% стоимости баллами Live Cashback.</p>
-                </div>
-                <div class="y-slides">
-                    <img src="image/Image 20.jpg" alt="Яндекс Путь 1">
-                    <img src="image/Image 21.jpg" alt="Яндекс Путь 2">
-                </div>
-            </div>
+            <h2 class="title">Как это работает с Яндекс</h2>
+            <img src="img/Image 20.jpg" alt="Яндекс Go" class="full-slide">
+            <img src="img/Image 21.jpg" alt="Инструкция такси" class="full-slide">
+            <img src="img/Image 25.jpg" alt="Яндекс Заправки" class="full-slide">
+            <img src="img/Image 26.jpg" alt="Инструкция заправки" class="full-slide">
         </div>
     </section>
 
-    <section class="fuel">
+    <footer class="footer">
         <div class="container">
-            <div class="fuel-header">
-                <img src="image/Image 30.jpg" alt="Заправки Лого" class="fuel-logo">
-                <h2>Заправляйтесь «в ноль»</h2>
-            </div>
-            <div class="fuel-steps">
-                <img src="image/Image 25.jpg" alt="Инструкция заправки">
-                <img src="image/Image 26.jpg" alt="Инструкция заправки 2">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Техподдержка: @yazap444 | Live Cashback 2026</p>
+            <p>Поддержка: @yazap444 | Live Cashback 2026</p>
         </div>
     </footer>
 
