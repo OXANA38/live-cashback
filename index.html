@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cashback | Экономия до 90%</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo">LIVE<span>CASHBACK</span></span>
+            <a href="https://t.me/ваш_бот" class="btn-primary">Вход в бот</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Экономия будущего <br><span>уже сегодня</span></h1>
+                <p>Революционная система скидок: OZON, Wildberries, Яндекс.Заправки и такси. Получайте выгоду до 90% на ежедневные покупки.</p>
+                <div class="hero-btns">
+                    <a href="#calculator" class="btn-primary">Рассчитать доход</a>
+                    <a href="#about" class="btn-outline">Узнать больше</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/dashboard.jpg" alt="Live Cashback Dashboard">
+            </div>
+        </div>
+    </header>
+
+    <section id="calculator" class="calc-section">
+        <div class="container">
+            <h2>Интерактивный калькулятор баллов</h2>
+            <p class="section-subtitle">Посмотрите, как растут ваши возможности каждый день</p>
+            
+            <div class="calc-wrapper">
+                <div class="calc-inputs">
+                    <label>Выберите номинал карты:</label>
+                    <select id="cardSelect">
+                        <option value="5000">Start (5 000 ₽)</option>
+                        <option value="10000">Standard (10 000 ₽)</option>
+                        <option value="20000">Medium (20 000 ₽)</option>
+                        <option value="40000">Pro (40 000 ₽)</option>
+                        <option value="80000">Max (80 000 ₽)</option>
+                        <option value="150000">VIP (150 000 ₽)</option>
+                    </select>
+
+                    <label>Срок (дней): <span id="daysVal">30</span></label>
+                    <input type="range" id="daysRange" min="1" max="150" value="30">
+                </div>
+                
+                <div class="calc-result">
+                    <div class="result-box">
+                        <span class="label">Итого на балансе:</span>
+                        <span id="finalBalance" class="value">0</span>
+                        <span class="currency">баллов (₽)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
