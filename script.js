@@ -1,32 +1,23 @@
-const rates = {
-    "5000": 5000,
-    "10000": 10000,
-    "20000": 20000,
-    "40000": 40000,
-    "80000": 80000,
-    "150000": 150000
-};
-
 function updateCalc() {
-    const nominal = parseInt(document.getElementById('cardSelect').value);
-    const days = parseInt(document.getElementById('daysRange').value);
-    
-    document.getElementById('daysVal').innerText = days;
+  const nominal = Number(document.getElementById("nominal").value);
+  const days    = Number(document.getElementById("days").value);
 
-    let balance = 0;
-    const dailyBonus = nominal * 0.01; // 1% от номинала
+  document.getElementById("daysValue").textContent = days;
 
-    for (let i = 1; i <= days; i++) {
-        let percentOnBalance = balance * 0.01; // 1% на остаток
-        balance += (dailyBonus + percentOnBalance);
-    }
+  let balance = 0;
+  const dailyFixed = nominal * 0.01;
 
-    document.getElementById('finalBalance').innerText = Math.floor(balance).toLocaleString();
+  for (let i = 0; i < days; i++) {
+    const dailyCompound = balance * 0.01;
+    balance += dailyFixed + dailyCompound;
+  }
+
+  document.getElementById("result").textContent = Math.floor(balance).toLocaleString();
 }
 
-// Слушатели событий
-document.getElementById('cardSelect').addEventListener('change', updateCalc);
-document.getElementById('daysRange').addEventListener('input', updateCalc);
+// Слушатели
+document.getElementById("nominal").addEventListener("change", updateCalc);
+document.getElementById("days").addEventListener("input", updateCalc);
 
-// Инициализация при загрузке
+// Первый расчёт
 updateCalc();
