@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Cashback | Официальный сайт</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Cashback — Экономия до 90% уже сегодня</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">LIVE<span>CASHBACK</span></div>
-            <a href="https://t.me/LiveCashBack_bot" class="btn-primary">Запустить бота</a>
-        </div>
-    </nav>
+  <!-- Навбар -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">LIVE<span>CASHBACK</span></div>
+      <a href="https://t.me/LiveCashBack_bot" class="btn-primary" target="_blank">Запустить бота</a>
+    </div>
+  </nav>
 
-    <section class="section">
-        <div class="container">
-            <img src="img/Image 1.jpg" alt="Презентация 1" class="full-slide">
-            <img src="img/Image 2.jpg" alt="Презентация 2" class="full-slide">
-            <img src="img/Image 3.jpg" alt="Презентация 3" class="full-slide">
-        </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Экономия будущего<span>уже сегодня</span></h1>
+        <p>Получай до 90% выгоды на OZON, Wildberries, Яндекс Go и заправках. Пассивный доход на баллы каждый день.</p>
+        <a href="https://t.me/LiveCashBack_bot" class="btn-primary large" target="_blank">Начать экономить</a>
+      </div>
+      <div class="hero-right">
+        <img src="img/Image 1.jpg" alt="Презентация Live Cashback" class="hero-slide"/>
+      </div>
+    </div>
+  </section>
 
-    <section class="collage-section">
-        <div class="container">
-            <h2 class="title">Результаты и выплаты</h2>
-            <div class="collage-container">
-                <img src="img/photo_2026-02-28_09-43-02.jpg" class="screen s1" alt="Кабинет">
-                <img src="img/Screenshot_5.png" class="screen s2" alt="Скриншот">
-                <img src="img/photo_2026-02-28_09-46-37.jpg" class="screen s3" alt="Выплаты">
+  <!-- Тарифы -->
+  <section class="section tariffs">
+    <div class="container">
+      <h2 class="section-title">Выбери свою LiveCard</h2>
+      <img src="img/Image 4.jpg" alt="Тарифы" class="full-slide"/>
+      <a href="https://t.me/LiveCashBack_bot" class="btn-primary center" target="_blank">Выбрать карту</a>
+    </div>
+  </section>
+
+  <!-- Калькулятор -->
+  <section id="calculator" class="section calc-section">
+    <div class="container">
+      <h2 class="section-title">Рассчитай свою выгоду</h2>
+      <div class="calc-card">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Номинал LiveCard</label>
+            <select id="nominal">
+              <option value="5000">Start — 5 000 ₽</option>
+              <option value="10000">Standard — 10 000 ₽</option>
+              <option value="20000">Medium — 20 000 ₽</option>
+              <option value="40000">Pro — 40 000 ₽</option>
+              <option value="80000">Max — 80 000 ₽</option>
+              <option value="150000">VIP — 150 000 ₽</option>
+            </select>
+
+            <label>Срок накопления: <span id="daysValue">30</span> дней</label>
+            <input type="range" id="days" min="1" max="180" value="30"/>
+          </div>
+
+          <div class="calc-result">
+            <div class="result-circle">
+              <span id="result">0</span>
+              <small>баллов</small>
             </div>
-            <p class="collage-caption">Реальные примеры работы системы и обмена баллов на маркетплейсах</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="calculator" class="calc-section">
-        <div class="container">
-            <img src="img/Image 4.jpg" alt="Тарифы" class="full-slide">
-            
-            <div class="calc-card">
-                <h2>Рассчитайте свою выгоду</h2>
-                <div class="calc-grid">
-                    <div class="inputs">
-                        <label>Номинал карты:</label>
-                        <select id="cardSelect">
-                            <option value="5000">Start (5 000 ₽)</option>
-                            <option value="10000">Standard (10 000 ₽)</option>
-                            <option value="20000">Medium (20 000 ₽)</option>
-                            <option value="40000">Pro (40 000 ₽)</option>
-                            <option value="80000">Max (80 000 ₽)</option>
-                            <option value="150000">VIP (150 000 ₽)</option>
-                        </select>
-                        <label>Срок (дней): <span id="daysVal">30</span></label>
-                        <input type="range" id="daysRange" min="1" max="150" value="30">
-                    </div>
-                    <div class="results">
-                        <div class="res-display">
-                            <span id="finalBalance">0</span>
-                            <small>баллов</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Как работает -->
+  <section class="section how">
+    <div class="container">
+      <h2 class="section-title">Как это работает</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <img src="img/Image 20.jpg" alt="Шаг 1"/>
+          <p>1. Активируй карту в боте</p>
         </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="title">Как это работает с Яндекс</h2>
-            <img src="img/Image 20.jpg" alt="Яндекс Go" class="full-slide">
-            <img src="img/Image 21.jpg" alt="Инструкция такси" class="full-slide">
-            <img src="img/Image 25.jpg" alt="Яндекс Заправки" class="full-slide">
-            <img src="img/Image 26.jpg" alt="Инструкция заправки" class="full-slide">
+        <div class="step">
+          <img src="img/Image 25.jpg" alt="Шаг 2"/>
+          <p>2. Получай 1% + 1% ежедневно</p>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Поддержка: @yazap444 | Live Cashback 2026</p>
+        <div class="step">
+          <img src="img/Image 21.jpg" alt="Шаг 3"/>
+          <p>3. Обменивай баллы на покупки</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Отзывы / скрины -->
+  <section class="section reviews">
+    <div class="container">
+      <h2 class="section-title">Что говорят участники</h2>
+      <div class="reviews-grid">
+        <img src="img/photo_2026-02-28_09-43-02.jpg" alt="Отзыв 1"/>
+        <img src="img/photo_2026-02-28_09-46-37.jpg" alt="Отзыв 2"/>
+        <img src="img/Screenshot_5.png" alt="Отзыв 3"/>
+        <!-- добавь ещё скрины по желанию -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Финальный CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Не упусти возможность экономить каждый день</h2>
+      <a href="https://t.me/LiveCashBack_bot" class="btn-primary huge" target="_blank">Перейти в бота и начать</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Техподдержка: @yazap444 • © 2026 Live Cashback</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
