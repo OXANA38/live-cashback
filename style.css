@@ -25,8 +25,20 @@ body {
   border-bottom: 1px solid #222;
 }
 
-.logo { font-size: 2rem; font-weight: 900; }
-.logo span { color: var(--primary); }
+.logo {
+  font-size: 3.5rem;          /* ← основной размер, можно сделать 4rem, 4.5rem или даже 5rem */
+  font-weight: 900;
+  letter-spacing: -1px;       /* оставь или увеличь до -2px для стиля */
+  line-height: 1;             /* чтобы не было лишнего пространства сверху/снизу */
+}
+
+.logo span {
+  color: var(--primary);      /* фиолетовый или какой у тебя акцент */
+  font-size: 4rem;            /* ← CASHBACK можно сделать ещё крупнее, чем LIVE */
+  background: linear-gradient(90deg, #8e2de2, #00d4ff); /* градиент, как в твоём стиле */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), #5e0fd6);
