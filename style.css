@@ -80,3 +80,48 @@ select, input[type="range"] {
     h1 { font-size: 2.5rem; }
     .calc-wrapper { flex-direction: column; }
 }
+
+/* Эффект коллажа для скринов */
+.collage-container {
+    position: relative;
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    position: absolute;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+.s1 { transform: rotate(-15deg) translateX(-150px); z-index: 1; }
+.s2 { transform: rotate(0deg); z-index: 2; width: 300px; } /* Центральный чуть больше */
+.s3 { transform: rotate(15deg) translateX(150px); z-index: 1; }
+
+.screen:hover {
+    z-index: 10;
+    transform: scale(1.1) rotate(0deg);
+}
+
+/* Стили для слайдов из презентаций */
+.main-slide, .y-slides img, .fuel-steps img, .slides-grid img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(138,43,226,0.2);
+}
+
+.yandex-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
