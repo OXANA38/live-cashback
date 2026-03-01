@@ -270,3 +270,6 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
 /* cache-breaker-2026-03-01-v5 */
 /* super-cache-breaker-20260301-v6-for-fuel-block-only */
 .fuel .slides-row img { min-height: 750px !important; } /* принудительно повышаем приоритет */
+
+/* FINAL-CACHE-BREAKER-20260301-v7-fuel-only-please-update */
+.fuel .slides-row img { min-height: 800px !important; } /* принудительно 800px */
