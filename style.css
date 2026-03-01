@@ -293,3 +293,15 @@ footer {
 
 /* Последний breaker для надёжности */
 .final-cache-breaker-20260301-v10 {}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+}
+
+.full-width-fuel {
+  width: 100%;
+  height: auto;
+  display: block;
+}
