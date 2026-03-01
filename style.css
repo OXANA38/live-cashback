@@ -417,29 +417,34 @@ body {
   }
 }
 
-/* ===== ФИКС: Увеличенные картинки для Яндекс.Go (86% ширины, 7% отступы) ===== */
+/* ===== ФИКС v2: Яндекс.Go — Без обрезки, 86% ширины ===== */
 
 .yandex-go .slides-row {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 30px !important;                    /* уменьшили с 40px для крупности */
+  gap: 30px !important;
   
-  /* Выходим за пределы .container */
+  /* 86% ширины экрана (по 7% отступы слева и справа) */
   width: 86vw !important;
-  margin-left: calc(50% - 43vw) !important;  /* 86vw / 2 = 43vw */
+  margin-left: calc(50% - 43vw) !important;
   margin-right: calc(50% - 43vw) !important;
   max-width: none !important;
   padding: 0 !important;
+  overflow: visible !important; /* Гарантируем, что ничего не обрезается */
 }
 
 .yandex-go .slides-row img {
   width: 100% !important;
-  height: auto !important;
-  min-height: 400px !important;              /* увеличили высоту */
-  object-fit: cover !important;
+  height: auto !important; /* Высота подстраивается автоматически */
+  min-height: auto !important; /* Убираем фиксированную высоту */
+  object-fit: contain !important; /* Показываем картинку целиком */
+  display: block !important;
+  
+  /* Стиль сохраняем */
   border-radius: 20px !important;
   box-shadow: 0 25px 70px rgba(0,0,0,0.8) !important;
   border: 2px solid rgba(100, 100, 150, 0.3) !important;
+  background: #14141b; /* Фон под картинкой, если пропорции не совпадут */
 }
 
 /* ===== Адаптив для планшетов ===== */
@@ -449,10 +454,6 @@ body {
     margin-left: calc(50% - 45vw) !important;
     margin-right: calc(50% - 45vw) !important;
     gap: 25px !important;
-  }
-  
-  .yandex-go .slides-row img {
-    min-height: 350px !important;
   }
 }
 
@@ -465,11 +466,6 @@ body {
     margin-right: calc(50% - 47.5vw) !important;
     gap: 20px !important;
   }
-  
-  .yandex-go .slides-row img {
-    min-height: 300px !important;
-    border-radius: 16px !important;
-  }
 }
 
 /* ===== Маленькие телефоны ===== */
@@ -478,10 +474,5 @@ body {
     width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
-  }
-  
-  .yandex-go .slides-row img {
-    min-height: 250px !important;
-    border-radius: 12px !important;
   }
 }
