@@ -273,3 +273,13 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
 
 /* FINAL-CACHE-BREAKER-20260301-v7-fuel-only-please-update */
 .fuel .slides-row img { min-height: 800px !important; } /* принудительно 800px */
+
+/* ULTIMATE-FORCE-FUEL-IMAGE-20260301-v8 */
+.fuel .slides-row img {
+  width: 100% !important;
+  min-height: 900px !important;     /* огромная высота, чтобы текст был гигантским */
+  max-width: 100% !important;
+  margin: 50px 0 80px 0 !important;
+  border-radius: 20px !important;
+  object-fit: contain !important;
+}
