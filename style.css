@@ -239,17 +239,37 @@ footer { padding: 60px 0; text-align: center; color: var(--gray); border-top: 1p
   max-width: 100%;                 /* снимаем ограничение 1200px, если оно где-то стоит */
 }
 
+/* FINAL-FUEL-IMAGE-FIX-2026-03-01-v9 — единственное правило */
 .fuel .slides-row img {
-  width: 100%;                     /* на всю ширину родителя (.slides-row) */
-  max-width: 100%;                 /* не шире родителя */
-  min-height: 680px;               /* крупная высота → текст читаемый */
-  height: auto;
-  object-fit: contain;             /* вся картинка видна, без обрезки */
-  display: block;
-  margin: 40px 0 60px 0;           /* нормальные отступы, БЕЗ отрицательных */
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 850px !important;     /* очень большая высота — текст будет огромным */
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 60px 0 80px 0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.8) !important;
 }
+
+/* Мобильные */
+@media (max-width: 900px) {
+  .fuel .slides-row img {
+    min-height: 600px !important;
+    margin: 40px 0 60px 0 !important;
+    border-radius: 14px !important;
+  }
+}
+
+/* Широкие экраны */
+@media (min-width: 1400px) {
+  .fuel .slides-row img {
+    max-width: 1400px !important;
+    margin: 60px auto 80px !important;
+  }
+}
+
+/* LAST-CACHE-BREAKER-20260301-v9 */
 
 /* Мобильные — чуть меньше высоты */
 @media (max-width: 900px) {
