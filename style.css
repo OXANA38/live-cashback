@@ -476,3 +476,48 @@ body {
     margin-right: calc(50% - 50vw) !important;
   }
 }
+
+/* ===== Тарифы LiveCard — Вертикальный стек, 75% ширины ===== */
+
+.tariffs img {
+  display: block !important;
+  width: 75vw !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 auto 40px auto !important; /* Центрирование + отступ снизу */
+  border-radius: 20px !important;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.8) !important;
+  border: 2px solid rgba(100, 100, 150, 0.3) !important;
+  object-fit: contain !important;
+}
+
+/* Последней картинке убираем большой отступ снизу */
+.tariffs img:last-of-type {
+  margin-bottom: 20px !important;
+}
+
+/* ===== Адаптив для планшетов ===== */
+@media (max-width: 1200px) {
+  .tariffs img {
+    width: 85vw !important;
+    margin: 0 auto 35px auto !important;
+  }
+}
+
+/* ===== Адаптив для мобильных ===== */
+@media (max-width: 900px) {
+  .tariffs img {
+    width: 92vw !important;
+    margin: 0 auto 30px auto !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* ===== Маленькие телефоны ===== */
+@media (max-width: 480px) {
+  .tariffs img {
+    width: 96vw !important;
+    margin: 0 auto 25px auto !important;
+    border-radius: 12px !important;
+  }
+}
