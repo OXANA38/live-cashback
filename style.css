@@ -522,23 +522,30 @@ body {
   }
 }
 
-/* ===== Рефералка — ТОЧНОЕ центрирование ===== */
+/* ===== Рефералка — ИСПРАВЛЕННОЕ центрирование ===== */
 
+/* 1. Полностью нейтрализуем контейнер в этой секции */
+.promo .container {
+  max-width: 100% !important;
+  padding: 0 !important; /* Убираем те самые 20px */
+  margin: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* 2. Сетка с картинками */
 .promo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   
-  /* ТОЧНОЕ центрирование через transform */
+  /* Центрирование на весь экран */
   width: 90vw !important;
-  position: relative !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  
-  margin: 0 auto 50px auto !important;
-  max-width: none !important;
+  margin: 0 auto 50px auto !important; /* Auto центрирует блок */
+  max-width: 1400px !important;
 }
 
+/* 3. Сами картинки */
 .promo-grid img {
   width: 100% !important;
   height: auto !important;
@@ -547,13 +554,6 @@ body {
   border: 2px solid rgba(100, 100, 150, 0.3) !important;
   object-fit: contain !important;
   display: block !important;
-}
-
-/* Убираем все ограничения от container */
-.promo .container {
-  max-width: 100% !important;
-  padding: 0 !important;
-  overflow: visible !important;
 }
 
 /* ===== Адаптив ===== */
