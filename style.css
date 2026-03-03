@@ -605,3 +605,45 @@ body {
     padding: 0 10px !important;
   }
 }
+
+/* ===== FAQ — Одна картинка 80% ширины, по центру ===== */
+
+.faq-single-image {
+  width: 80vw !important;
+  margin: 0 auto 50px auto !important;
+  max-width: 1200px !important;
+  display: block !important;
+}
+
+.faq-single-image img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.8) !important;
+  border: 2px solid rgba(100, 100, 150, 0.3) !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 1200px) {
+  .faq-single-image {
+    width: 85vw !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-single-image {
+    width: 92vw !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-single-image {
+    width: 96vw !important;
+  }
+  
+  .faq-single-image img {
+    border-radius: 16px !important;
+  }
+}
