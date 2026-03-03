@@ -753,3 +753,54 @@ body {
     border-radius: 16px;
   }
 }
+
+/* ===== Исправление: Кнопка "Выбрать карту" — больше и меньше отступ ===== */
+
+/* 1. Увеличиваем кнопку */
+.tariffs .btn-primary.center {
+  padding: 20px 60px !important;
+  font-size: 1.5rem !important;
+  margin: 40px auto 60px auto !important; /* Уменьшили нижний отступ */
+  max-width: 400px !important;
+}
+
+/* 2. Уменьшаем отступ между секциями Tariffs и Reviews */
+.section.tariffs {
+  padding-bottom: 60px !important; /* Было 120px */
+}
+
+.section.reviews {
+  padding-top: 60px !important; /* Было 120px */
+}
+
+/* 3. Hover-эффект для большой кнопки */
+.tariffs .btn-primary.center:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 40px rgba(125, 42, 232, 0.5) !important;
+}
+
+/* ===== Адаптив для мобильных ===== */
+@media (max-width: 900px) {
+  .tariffs .btn-primary.center {
+    padding: 16px 40px !important;
+    font-size: 1.3rem !important;
+    margin: 30px auto 50px auto !important;
+    max-width: 320px !important;
+  }
+  
+  .section.tariffs {
+    padding-bottom: 40px !important;
+  }
+  
+  .section.reviews {
+    padding-top: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tariffs .btn-primary.center {
+    padding: 14px 30px !important;
+    font-size: 1.2rem !important;
+    max-width: 280px !important;
+  }
+}
