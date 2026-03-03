@@ -821,12 +821,12 @@ body {
 
 /* 3. Уменьшаем отступ у кнопки */
 .tariffs .btn-primary.center {
-  margin-bottom: 30px !important; /* Было 60px */
+  margin-bottom: 20px !important; /* Было 60px */
 }
 
 /* 4. Уменьшаем отступ у заголовка "Что говорят участники" */
 .reviews .section-title {
-  margin-bottom: 40px !important; /* Было 60px */
+  margin-bottom: 20px !important; /* Было 60px */
 }
 
 /* ===== Адаптив для мобильных ===== */
