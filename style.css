@@ -521,3 +521,89 @@ body {
     border-radius: 12px !important;
   }
 }
+
+/* ===== Рефералка + Промо — 2 картинки в ряд, 90% ширины ===== */
+
+/* Создаём грид-контейнер для картинок внутри .promo */
+.promo {
+  position: relative;
+}
+
+.promo img.full-slide {
+  display: none !important; /* Скрываем стандартное отображение */
+}
+
+/* Создаём обёртку через псевдо-элемент или используем существующие img */
+/* Лучше переделать HTML, но если нет — сделаем через grid на container */
+
+.promo .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Стили для первых двух картинок (рефералка) */
+.promo img.full-slide:nth-of-type(1),
+.promo img.full-slide:nth-of-type(2) {
+  display: block !important;
+  width: calc(45vw - 15px) !important; /* Половина от 90vw минус половина gap */
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.8) !important;
+  border: 2px solid rgba(100, 100, 150, 0.3) !important;
+  object-fit: contain !important;
+}
+
+/* Первая картинка — отступ справа */
+.promo img.full-slide:nth-of-type(1) {
+  margin-right: 30px !important;
+}
+
+/* Обёртка для двух картинок */
+.promo .referral-images {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 30px !important;
+  width: 90vw !important;
+  margin: 0 auto 40px auto !important;
+  max-width: none !important;
+}
+
+/* ===== Адаптив для планшетов ===== */
+@media (max-width: 1200px) {
+  .promo .referral-images {
+    width: 92vw !important;
+    gap: 25px !important;
+  }
+}
+
+/* ===== Адаптив для мобильных (1 колонка) ===== */
+@media (max-width: 900px) {
+  .promo .referral-images {
+    grid-template-columns: 1fr !important;
+    width: 95vw !important;
+    gap: 20px !important;
+  }
+  
+  .promo img.full-slide:nth-of-type(1),
+  .promo img.full-slide:nth-of-type(2) {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* ===== Маленькие телефоны ===== */
+@media (max-width: 480px) {
+  .promo .referral-images {
+    width: 100vw !important;
+    margin: 0 calc(50% - 50vw) 30px calc(50% - 50vw) !important;
+  }
+  
+  .promo img.full-slide:nth-of-type(1),
+  .promo img.full-slide:nth-of-type(2) {
+    border-radius: 12px !important;
+  }
+}
