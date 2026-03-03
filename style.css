@@ -522,30 +522,52 @@ body {
   }
 }
 
-/* ===== Рефералка — ИСПРАВЛЕННОЕ центрирование ===== */
+/* ===== Рефералка — ИСПРАВЛЕНИЕ: текст по центру ===== */
 
-/* 1. Полностью нейтрализуем контейнер в этой секции */
+/* Возвращаем padding контейнеру для текста */
 .promo .container {
-  max-width: 100% !important;
-  padding: 0 !important; /* Убираем те самые 20px */
-  margin: 0 !important;
+  max-width: 1200px !important;
+  padding: 0 20px !important; /* Вернули отступы */
+  margin: 0 auto !important;
   width: 100% !important;
   overflow: visible !important;
 }
 
-/* 2. Сетка с картинками */
+/* Картинки выходят за пределы контейнера */
 .promo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   
-  /* Центрирование на весь экран */
-  width: 90vw !important;
-  margin: 0 auto 50px auto !important; /* Auto центрирует блок */
-  max-width: 1400px !important;
+  /* Выходим за пределы container */
+  width: calc(90vw - 40px) !important; /* 90vw минус padding контейнера */
+  max-width: calc(1200px - 40px) !important;
+  margin: 0 auto 50px auto !important;
+  
+  /* Центрируем через transform */
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
-/* 3. Сами картинки */
+/* Текст и кнопка — по центру */
+.promo p {
+  text-align: center !important;
+  font-size: 1.3rem !important;
+  color: var(--gray) !important;
+  margin-bottom: 30px !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.promo .btn-primary.center {
+  display: block !important;
+  margin: 0 auto 30px auto !important;
+  text-align: center !important;
+}
+
+/* Картинки */
 .promo-grid img {
   width: 100% !important;
   height: auto !important;
@@ -560,14 +582,26 @@ body {
 @media (max-width: 900px) {
   .promo-grid {
     grid-template-columns: 1fr !important;
-    width: 95vw !important;
+    width: calc(95vw - 40px) !important;
+    max-width: calc(100% - 40px) !important;
     gap: 30px !important;
+  }
+  
+  .promo p {
+    font-size: 1.1rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .promo-grid {
-    width: 98vw !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100% - 20px) !important;
     gap: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  .promo .container {
+    padding: 0 10px !important;
   }
 }
