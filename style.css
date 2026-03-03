@@ -789,11 +789,11 @@ body {
   }
   
   .section.tariffs {
-    padding-bottom: 40px !important;
+    padding-bottom: 20px !important;
   }
   
   .section.reviews {
-    padding-top: 40px !important;
+    padding-top: 20px !important;
   }
 }
 
