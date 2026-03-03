@@ -804,3 +804,46 @@ body {
     max-width: 280px !important;
   }
 }
+
+/* ===== Исправление v2: Минимальное расстояние между кнопкой и отзывами ===== */
+
+/* 1. Убираем отступы у секции Tariffs */
+.section.tariffs {
+  padding-bottom: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+/* 2. Убираем отступы у секции Reviews */
+.section.reviews {
+  padding-top: 20px !important;
+  margin-top: 0 !important;
+}
+
+/* 3. Уменьшаем отступ у кнопки */
+.tariffs .btn-primary.center {
+  margin-bottom: 30px !important; /* Было 60px */
+}
+
+/* 4. Уменьшаем отступ у заголовка "Что говорят участники" */
+.reviews .section-title {
+  margin-bottom: 40px !important; /* Было 60px */
+}
+
+/* ===== Адаптив для мобильных ===== */
+@media (max-width: 900px) {
+  .section.tariffs {
+    padding-bottom: 15px !important;
+  }
+  
+  .section.reviews {
+    padding-top: 15px !important;
+  }
+  
+  .tariffs .btn-primary.center {
+    margin-bottom: 25px !important;
+  }
+  
+  .reviews .section-title {
+    margin-bottom: 30px !important;
+  }
+}
