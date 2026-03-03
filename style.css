@@ -932,3 +932,12 @@ body {
     font-size: 2.5rem;
   }
 }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 15px 40px rgba(125, 42, 232, 0.5); }
+  50% { box-shadow: 0 20px 60px rgba(0, 212, 255, 0.7); }
+}
+
+.calc-section .btn-primary.center {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
